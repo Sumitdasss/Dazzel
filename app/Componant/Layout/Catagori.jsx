@@ -2,7 +2,7 @@ import {categories11} from "../../../Data/Data"
 
 const Catagori = () => {
   return (
-   <div className="w-full max-w-[1400px] mx-auto mt-6 bg-white font-sans">
+   <div className="w-full max-w-[1400px] p-5 md:p-0 mx-auto mt-6 bg-white font-sans">
       
       {/* Header Section */}
       <div className="flex items-center justify-between mb-6">

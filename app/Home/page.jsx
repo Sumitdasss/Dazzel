@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Infinity from "../Componant/Layout/InfoBar";
 import Catagori from "../Componant/Layout/Catagori"
+import FlashSale from "../Componant//Layout/Product"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -34,6 +35,7 @@ const Page = () => {
                   modules={[Navigation, Pagination, Autoplay]}
                   slidesPerView={1}
                   spaceBetween={0}
+                   loop={true}
                   autoplay={{
                     delay: 5000,
                     disableOnInteraction: false,
@@ -120,6 +122,7 @@ const Page = () => {
 
       <Infinity />
       <Catagori/>
+      <FlashSale/>
     </div>
   );
 };

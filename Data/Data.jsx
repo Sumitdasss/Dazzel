@@ -221,7 +221,357 @@
     originalPrice: 150990,
     discountPercentage: 25,
     liveViews: 17,
-    img: 'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black.webp&w=256&q=75',
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F63446%2FiPhone-17-Pro-Max-Price-in-Bangladesh-Cosmic-Orange.jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 2,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F52247%2FRedmi-15c-4G-price-in-Bangladesh-Moonlight-Blue.jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 3,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F63418%2FiPhone-17-Pro-Price-in-Bangladesh-Deep-Blue.jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 4,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F59045%2FRedmi-Note-15-5G-price-in-Bangladesh-Star-White.jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 5,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F59063%2FRedmi-Note-15-Pro-5G-price-in-Bangladesh-Sky-Blue.jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 6,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F59086%2FRedmi-Note-15-Pro-Plus-5G-price-in-Bangladesh-Smoky-Purple.jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 7,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F74654%2Fvivo-iQOO-Neo11-Price-in-Bangladesh--(1).jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 8,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F72613%2FOppo-Find-X9-Pro-Price-in-Bangladesh--(1).jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 9,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F68061%2FHonor-X9d-Price-in-Bangladesh-Midnight-Black.jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 10,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F72242%2Fvivo-X300-Pro-Price-in-Bangladesh--(2).jpg&w=256&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-blue-thumb3.webp&w=256&q=75',
+      'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-green-thumb4.webp&w=256&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 11,
+    name: 'iPhone 17',
+    brand: 'Apple',
+    category: 'Phones', // categories11 structure matches id: 1
+    price: 111990,
+    originalPrice: 150990,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F72381%2Fvivo-X300-Price-in-Bangladesh--(1).jpg&w=256&q=75',
     thumbnails: [
       'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-black-thumb1.webp&w=256&q=75',
       'https://dazzle.com.bd/_next/image?url=%2Fimages%2Fproducts%2Fiphone-17-purple-thumb2.webp&w=256&q=75',
