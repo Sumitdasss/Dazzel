@@ -6,6 +6,8 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import Infinity from "../Componant/Layout/InfoBar";
 import Catagori from "../Componant/Layout/Catagori"
 import FlashSale from "../Componant//Layout/Product"
+import BestProduct from "../Componant/Layout/BestProduct"
+import {Banner} from "../Componant/Layout/Bannner"
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -123,6 +125,8 @@ const Page = () => {
       <Infinity />
       <Catagori/>
       <FlashSale/>
+      <BestProduct/>
+      <Banner/>
     </div>
   );
 };
