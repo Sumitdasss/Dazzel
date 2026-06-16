@@ -22,9 +22,9 @@ const FlashSale = () => {
           <div className="flex items-center gap-3">
             <Countdown/>
 
-            <button className="bg-white px-5 py-2 rounded-lg font-medium">
+            <a href="/Shop" className="bg-white px-5 py-2 rounded-lg font-medium">
               SEE ALL
-            </button>
+            </a>
           </div>
         </div>
 
