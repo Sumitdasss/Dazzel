@@ -1,5 +1,5 @@
 "use client"
-
+import Link from "next/link";
 import { useState, useMemo } from 'react';
 
 import { products } from "../../Data/Data";
@@ -198,8 +198,8 @@ const STORAGElist = useMemo(() => {
   sortBy
 ]);
   return (
-    <div className="bg-[#FCFBFA] min-h-screen text-gray-800 font-sans antialiased p-4 md:p-8">
-      <div className="max-w-7xl mx-auto space-y-6">
+    <div className="bg-[#FCFBFA]  text-gray-800 font-sans antialiased p-4 md:p-8">
+      <div className="max-w-360 mx-auto space-y-6">
         
         {/* Top Brand Sliders/Tabs */}
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
@@ -491,13 +491,16 @@ const STORAGElist = useMemo(() => {
                     )}
 
                     {/* Image Box */}
+                     <Link href={`/DetailPage/${product.id}`}>
                     <div className="w-full h-48 flex items-center justify-center overflow-hidden mb-4 rounded bg-gray-50 p-2">
-                      <img 
+                     <img 
                         src={product.img} 
                         alt={product.name} 
                         className="max-h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
                       />
+                     
                     </div>
+                     </Link>
 
                     {/* Meta Info */}
                     <div className="text-center space-y-1.5 flex-grow">

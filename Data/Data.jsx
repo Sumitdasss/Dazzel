@@ -216,7 +216,7 @@
     id: 1,
     name: 'iPhone 14',
     brand: 'Apple',
-    color:["Sea Blue"," Yellow","Midnight","Starlight"],
+    color:["Yellow","Sea Blue ","Midnight","Starlight"],
     Region:"china",
     SIM:"Dual Sim",
     availability:"In-Stock",
@@ -235,12 +235,13 @@
     originalPrice: 77082 ,
     discountPercentage: 25,
     liveViews: 17,
-    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48522%2FiPhone-14-Price-in-Bangladesh-Yellow.jpg&w=256&q=75',
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48536%2FiPhone-14-Price-in-Bangladesh-Yellow.jpg&w=640&q=75',
     thumbnails: [
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48536%2FiPhone-14-Price-in-Bangladesh-Yellow.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48539%2FiPhone-14-Price-in-Bangladesh-Starlight.jpg&w=96&q=75'
+      "https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48536%2FiPhone-14-Price-in-Bangladesh-Yellow.jpg&w=640&q=75",
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F85589%2FiPhone-14-price-in-bangladesh.jpg&w=640&q=75',
+   
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48539%2FiPhone-14-Price-in-Bangladesh-Starlight.jpg&w=640&q=75'
     ],
     ramVariants: [
     "128GB 6GB RAM",
@@ -285,11 +286,11 @@
     liveViews: 17,
     img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F102863%2FiPhone-Air-Price-in-Bangladesh-Sky-Blue.jpg&w=640&q=75',
     thumbnails: [
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48536%2FiPhone-14-Price-in-Bangladesh-Yellow.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48539%2FiPhone-14-Price-in-Bangladesh-Starlight.jpg&w=96&q=75'
-    ],
+     "https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F102863%2FiPhone-Air-Price-in-Bangladesh-Sky-Blue.jpg&w=640&q=75",
+      "https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F102864%2FiPhone-Air-Price-in-Bangladesh-Space-Black.jpg&w=640&q=75",
+      "https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F102865%2FiPhone-Air-Price-in-Bangladesh-Light-Gold.jpg&w=640&q=75",
+      "https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F102866%2FiPhone-Air-Price-in-Bangladesh-Cloud-White.jpg&w=640&q=75"],
+    
     variants: {
       colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
       regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
@@ -313,7 +314,7 @@
     id: 3,
     name: 'iPhone 17 Pro Max',
     brand: 'Apple',
-    color:["Sky Blue","Deep Blue"," Silver"],
+    color:["Cosmic Orange","Deep Blue"," Silver"],
     Region:"Japan",
      availability:"In-Stock",
     SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
@@ -328,10 +329,10 @@
     liveViews: 17,
     img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75550%2FiPhone-17-Pro-Max-Pro-Price-in-Bangladesh.jpg&w=640&q=75',
     thumbnails: [
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48536%2FiPhone-14-Price-in-Bangladesh-Yellow.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48539%2FiPhone-14-Price-in-Bangladesh-Starlight.jpg&w=96&q=75'
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75550%2FiPhone-17-Pro-Max-Pro-Price-in-Bangladesh.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75551%2FiPhone-17-Pro-Max-Pro-Price-in-Bangladesh-(1).jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75552%2FiPhone-17-Pro-Max-Pro-Price-in-Bangladesh-(2).jpg&w=640&q=75',
+
     ],
     variants: {
       colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
@@ -357,7 +358,7 @@
     name: 'iPhone 16',
     brand: 'Apple',
      availability:"Out-of-Stock",
-    color:["Ultramarine","Black"," Pink","Teal","White"],
+    color:["Ultramarine","Black"," Pink","Teal"],
     Region:"Japan",
     SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
     category: 'Phones',
@@ -369,12 +370,99 @@
     originalPrice: 144125 ,
     discountPercentage: 25,
     liveViews: 17,
-    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F68705%2FiPhone-16-price-in-Bangladesh-White.jpg&w=640&q=75',
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F68700%2F1-iPhone-16-price-in-Bangladesh-Ultramarine.jpg&w=640&q=75',
     thumbnails: [
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48536%2FiPhone-14-Price-in-Bangladesh-Yellow.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48538%2FiPhone-14-Price-in-Bangladesh-Midnight.jpg&w=96&q=75',
-      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F48539%2FiPhone-14-Price-in-Bangladesh-Starlight.jpg&w=96&q=75'
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F68700%2F1-iPhone-16-price-in-Bangladesh-Ultramarine.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F68701%2FiPhone-16-price-in-Bangladesh-Black.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F68702%2FiPhone-16-price-in-Bangladesh-Pink.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F68704%2FiPhone-16-price-in-Bangladesh-Teal.jpg&w=640&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  
+  {
+    id: 5,
+    name: 'iPhone 17',
+    brand: 'Apple',
+     availability:"In-Stock",
+    color:[" Lavender","Black"," Mist Blue","Sage"],
+    Region:"China",
+    SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
+    category: 'Phones',
+    Prosesor:"Apple A19",
+    STORAGE:["256GB","512GB"],
+    VARIANT:["Global Variant (Sim + e-Sim)","JP/MEA (Dual e-Sim)","HK / CH (Dual Sim)"], 
+    price: 111990 ,
+    ram:["256GB 8GB", "512GB 8GB" ],
+    originalPrice: 125126 ,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F63823%2FiPhone-17-Price-in-Bangladesh-Lavender.webp&w=640&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F63823%2FiPhone-17-Price-in-Bangladesh-Lavender.webp&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F63822%2FiPhone-17-Price-in-Bangladesh-Black.webp&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F63824%2FiPhone-17-Price-in-Bangladesh-Mist-Blue.webp&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F63825%2FiPhone-17-Price-in-Bangladesh-Sage.webp&w=640&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 6,
+    name: 'iPhone 17 Pro',
+    brand: 'Apple',
+     availability:"In-Stock",
+    color:["Deep Blue","Cosmic Orange"," Silver"],
+    Region:"China",
+    SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
+    category: 'Phones',
+    Prosesor:"Apple A19 Pro ",
+    STORAGE:["256GB","512GB","1TB"],
+    VARIANT:["Global Variant (Sim + e-Sim)","JP/MEA (Dual e-Sim)","HK / CH (Dual Sim)"], 
+    price: 141990 ,
+    ram:["256GB 12GB", "512GB 12GB", "1TB 12GB" ],
+    originalPrice: 158645  ,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75559%2FiPhone-17-Pro-Price-in-Bangladesh--(2).jpg&w=640&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75559%2FiPhone-17-Pro-Price-in-Bangladesh--(2).jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75561%2FiPhone-17-Pro-Price-in-Bangladesh--(1).jpg&w=640&q=75',
+
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F75562%2FiPhone-17-Pro-Price-in-Bangladesh--(3).jpg&w=640&q=75'
     ],
     variants: {
       colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
