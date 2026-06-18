@@ -6,33 +6,37 @@ import { FaGift, FaFileInvoice } from "react-icons/fa";
 import { LuMenu } from "react-icons/lu";
 import { RxCross1 } from "react-icons/rx";
 import { FaAngleRight } from "react-icons/fa6";
+import { CgShoppingCart } from "react-icons/cg";
 import { categories } from "../Data/Data";
+import useStore from "./Componant/Layout/Store/store";
+import Link from "next/link";
+import { products } from "../Data/Data";
 const Heading = () => {
+  const getBrandsByCategory = (category) => {
+  return [...new Set(  products.filter((p) => p?.category?.toLowerCase().trim() ===category?.toLowerCase().trim()) .map((p) => p.brand))];};
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMenuOpen2, setIsMenuOpen2] = useState(false);
   const menuRef = useRef(null);
   const [openMenu2, setOpenMenu2] = useState(null);
   const [search, setSearch] = useState("");
 
-useEffect(() => {
-  const handleClickOutside = (event) => {
-    if (
-      menuRef.current &&
-      !menuRef.current.contains(event.target)
-    ) {
-      setIsMenuOpen2(false);
-    }
-  };
+  const { cart } = useStore();
+  const totalItems = cart.length;
 
-  document.addEventListener("mousedown", handleClickOutside);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen2(false);
+      }
+    };
 
-  return () => {
-    document.removeEventListener(
-      "mousedown",
-      handleClickOutside
-    );
-  };
-}, []);
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,7 +47,7 @@ useEffect(() => {
   const handleSearch = () => {
     console.log(search);
   };
-  
+
   const [activeCategory, setActiveCategory] = useState(categories[0]);
   return (
     <div className="">
@@ -214,14 +218,16 @@ useEffect(() => {
                           openMenu2 === item.name ? "max-h-100" : "max-h-0"
                         }`}
                       >
-                        {item.sub.map((subItem, index) => (
-                          <div
-                            key={index}
-                            className="pl-8 py-2 text-sm hover:bg-gray-100 cursor-pointer"
-                          >
-                            {subItem.name}
-                          </div>
-                        ))}
+                         {getBrandsByCategory(item.name).map((brand, idx) => (
+    <li
+      key={idx}
+      className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase"
+    >
+      <Link href={`/Shop?category=${item.name}&brand=${brand}`}>
+            {brand}
+          </Link>
+    </li>
+  ))}
                       </div>
                     </div>
                   ))}
@@ -262,7 +268,7 @@ useEffect(() => {
             </div>
           </div>
 
-          <div className="md:flex lg:flex hidden md:block items-center gap-2 md:gap-3 text-xs font-semibold tracking-wider overflow-x-auto whitespace-nowrap pb-1 md:pb-0 scrollbar-none">
+          <div className="md:flex lg:flex hidden md:block items-center gap-2 md:gap-3 text-xs font-semibold tracking-wider whitespace-nowrap pb-1 md:pb-0">
             <a
               href="#offer"
               className="flex items-center gap-1.5 bg-[#1a2228] border border-gray-800 hover:border-amber-500/50 px-3 md:px-4 py-2 rounded-full text-[#dda96a] transition-all"
@@ -280,26 +286,18 @@ useEffect(() => {
               <span>PRE ORDER</span>
             </a>
 
-            <a
-              href="#cart"
-              className="flex items-center gap-2 border border-[#bfa280]/60 hover:border-[#bfa280] px-3 md:px-4 py-2 rounded-md text-[#dda96a] transition-colors"
+            <Link
+              href="/Cart"
+              className="relative flex items-center gap-2 border border-[#bfa280]/60 hover:border-[#bfa280] px-3 md:px-4 py-2 rounded-md text-[#dda96a] transition-colors "
             >
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                />
-              </svg>
+              <div className="relative">
+                <CgShoppingCart />
+              </div>
+              <span className="absolute -top-2 z-30 -right-2 flex items-center justify-center min-w-[18px] h-[18px] rounded-full bg-red-600 text-white text-[10px] font-bold">
+                {totalItems}
+              </span>
               <span>CART</span>
-            </a>
-
+            </Link>
             <a
               href="#login"
               className="border border-[#bfa280]/60 hover:border-[#bfa280] px-3 md:px-4 py-2 rounded-md text-[#dda96a] transition-colors"
@@ -312,72 +310,70 @@ useEffect(() => {
 
       <div className="w-full hidden md:block bg-white border-b border-gray-100 shadow-sm px-4">
         <div className="max-w-[1440px] mx-auto flex items-center justify-between py-2.5 md:py-3 gap-4">
-         <div ref={menuRef} className="relative">
-  <button
-    onClick={toggleMenu2}
-    className="hidden md:block p-2.5 border border-[#e9cdb3] rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex-shrink-0"
-  >
-    <LuMenu size={24} />
-  </button>
-
-  <div
-    className={`absolute top-15 left-0 z-50 w-[700px] duration-500 bg-white rounded-lg shadow-xl overflow-hidden ${
-      isMenuOpen2 ? "max-h-[600px]" : "max-h-0"
-    }`}
-  >
-    <div className="flex h-[500px]">
-
-      {/* Categories */}
-      <div className="w-52 border-r bg-gray-50 overflow-y-auto">
-        {categories.map((cat) => (
-          <div
-            key={cat.name}
-            onClick={() => setActiveCategory(cat)}
-            className={`px-4 py-3 cursor-pointer transition-colors ${
-              activeCategory.name === cat.name
-                ? "bg-amber-100 font-semibold"
-                : "hover:bg-gray-100"
-            }`}
-          >
-            {cat.name}
-          </div>
-        ))}
-      </div>
-
-      {/* Brands */}
-      <div className="flex-1 p-6 overflow-y-auto">
-        <h3 className="text-lg font-semibold mb-6 text-gray-800">
-          Popular Brands
-        </h3>
-
-        <div className="grid grid-cols-3 gap-6">
-          {activeCategory?.sub?.map((brand) => (
-            <div
-              key={brand.name}
-              className="flex flex-col items-center justify-center p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition"
+          <div ref={menuRef} className="relative">
+            <button
+              onClick={toggleMenu2}
+              className="hidden md:block p-2.5 border border-[#e9cdb3] rounded-lg text-gray-700 hover:bg-gray-50 transition-colors flex-shrink-0"
             >
-              <img
-                src={brand.logo}
-                alt={brand.name}
-                className="h-12 w-auto object-contain"
-              />
+              <LuMenu size={24} />
+            </button>
 
-              <span className="mt-2 text-sm text-gray-600 text-center">
-                {brand.name}
-              </span>
+            <div
+              className={`absolute top-15 left-0 z-50 w-[700px] duration-500 bg-white rounded-lg shadow-xl overflow-hidden ${
+                isMenuOpen2 ? "max-h-[600px]" : "max-h-0"
+              }`}
+            >
+              <div className="flex h-[500px]">
+                {/* Categories */}
+                <div className="w-52 border-r bg-gray-50 overflow-y-auto">
+                  {categories.map((cat) => (
+                    <div
+                      key={cat.name}
+                      onClick={() => setActiveCategory(cat)}
+                      className={`px-4 py-3 cursor-pointer transition-colors ${
+                        activeCategory.name === cat.name
+                          ? "bg-amber-100 font-semibold"
+                          : "hover:bg-gray-100"
+                      }`}
+                    >
+                      {cat.name}
+                    </div>
+                  ))}
+                </div>
+
+                {/* Brands */}
+                <div className="flex-1 p-6 overflow-y-auto">
+                  <h3 className="text-lg font-semibold mb-6 text-gray-800">
+                    Popular Brands
+                  </h3>
+
+                  <div className="grid grid-cols-3 gap-6">
+                    {activeCategory?.sub?.map((brand) => (
+                      <div
+                        key={brand.name}
+                        className="flex flex-col items-center justify-center p-3 rounded-lg hover:bg-gray-50 cursor-pointer transition"
+                      >
+                        <img
+                          src={brand.logo}
+                          alt={brand.name}
+                          className="h-12 w-auto object-contain"
+                        />
+
+                        <span className="mt-2 text-sm text-gray-600 text-center">
+                          {brand.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-
-    </div>
-  </div>
-</div>
+          </div>
           <ul className="flex items-center gap-5 md:gap-7 whitespace-nowrap py-1">
             {/* PHONES */}
             <li className="relative group">
-              <a
-                href="#"
+              <Link
+                href="/Shop"
                 className="flex items-center gap-2 text-slate-800 hover:text-[#bfa280] transition-colors flex-shrink-0"
               >
                 <img
@@ -388,23 +384,21 @@ useEffect(() => {
                 <span className="text-[11px] font-bold tracking-wider">
                   PHONES
                 </span>
-              </a>
+              </Link>
               {/* Dropdown Content */}
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
-                <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Apple
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Samsung
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Google Pixel
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Xiaomi
-                  </li>
-                </ul>
+              <ul className="flex flex-col">
+  {getBrandsByCategory("Phones").map((item, idx) => (
+    <li
+      key={idx}
+      className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase"
+    >
+      <Link href={`/Shop?brand=${item}`}>
+        {item}
+      </Link>
+    </li>
+  ))}
+</ul>
               </div>
             </li>
 
@@ -425,15 +419,13 @@ useEffect(() => {
               </a>
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
                 <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    iPad
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Samsung Tab
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Xiaomi Pad
-                  </li>
+                 {getBrandsByCategory("TABLET").map((item, idx) => (
+  <li key={idx} className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase">
+<Link href={`/Shop?brand=${item}`}>
+    {item}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
             </li>
@@ -455,15 +447,13 @@ useEffect(() => {
               </a>
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
                 <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    MacBook
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Windows Laptop
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Gaming Laptop
-                  </li>
+                      {getBrandsByCategory("LAPTOP").map((item, idx) => (
+  <li key={idx} className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase">
+<Link href={`/Shop?brand=${item}`}>
+    {item}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
             </li>
@@ -485,15 +475,13 @@ useEffect(() => {
               </a>
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
                 <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Apple Watch
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Galaxy Watch
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Amazfit
-                  </li>
+                    {getBrandsByCategory(" SMART WATCH").map((item, idx) => (
+  <li key={idx} className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase">
+<Link href={`/Shop?brand=${item}`}>
+    {item}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
             </li>
@@ -515,15 +503,13 @@ useEffect(() => {
               </a>
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
                 <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Power Bank
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Charger
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Gimbal
-                  </li>
+                  {getBrandsByCategory("GADGET").map((item, idx) => (
+  <li key={idx} className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase">
+<Link href={`/Shop?brand=${item}`}>
+    {item}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
             </li>
@@ -545,12 +531,13 @@ useEffect(() => {
               </a>
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
                 <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Phone Case
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Glass Protector
-                  </li>
+                    {getBrandsByCategory("ACCESSORIES").map((item, idx) => (
+  <li key={idx} className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase">
+<Link href={`/Shop?brand=${item}`}>
+    {item}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
             </li>
@@ -572,12 +559,13 @@ useEffect(() => {
               </a>
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
                 <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Earbuds
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Speakers
-                  </li>
+                   {getBrandsByCategory("SOUNDS").map((item, idx) => (
+  <li key={idx} className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase">
+<Link href={`/Shop?brand=${item}`}>
+    {item}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
             </li>
@@ -599,12 +587,13 @@ useEffect(() => {
               </a>
               <div className="w-[220px] max-h-0 opacity-0 absolute top-full left-0 bg-white shadow-xl rounded-b-lg border border-gray-100 z-50 overflow-hidden transition-all duration-300 pointer-events-none group-hover:max-h-[500px] group-hover:opacity-100 group-hover:pointer-events-auto text-black">
                 <ul className="flex flex-col">
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    Android TV
-                  </li>
-                  <li className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase duration-300 cursor-pointer">
-                    TV Box
-                  </li>
+                    {getBrandsByCategory("SMART TV").map((item, idx) => (
+  <li key={idx} className="px-5 py-2.5 hover:bg-[#064e3b] hover:text-[#5eead4] text-[12px] uppercase">
+<Link href={`/Shop?brand=${item}`}>
+    {item}
+    </Link>
+  </li>
+))}
                 </ul>
               </div>
             </li>

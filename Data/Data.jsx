@@ -483,5 +483,177 @@
       bluetooth: '6.0, A2DP, LE'
     }
   },
+  {
+    id: 7,
+    name: 'Samsung Galaxy M36',
+    brand: 'Samsung',
+     availability:"In-Stock",
+    color:["Orange Haze"," Serene Green","  Velvet Black"],
+    Region:"China",
+    SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
+    category: 'Phones',
+    Prosesor:"Exynos 1380 (5 nm)",
+    STORAGE:["6/128GB","8/128GB","8/256GB"],
+    VARIANT:["Global Variant (Sim + e-Sim)","JP/MEA (Dual e-Sim)","HK / CH (Dual Sim)"], 
+    price: 23490 ,
+    ram:["128GB 6GB", "128GB 8GB", '256GB 8GB'],
+    originalPrice: 26245 ,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F45556%2FSamsung-Galaxy-M36-price-in-Bangladesh-Orange-Haze.jpg&w=640&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F45556%2FSamsung-Galaxy-M36-price-in-Bangladesh-Orange-Haze.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F45557%2FSamsung-Galaxy-M36-price-in-Bangladesh-Serene-Green.jpg&w=640&q=75',
+
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F45558%2FSamsung-Galaxy-M36-price-in-Bangladesh-Velvet-Black.jpg&w=640&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 8,
+    name: 'Samsung Galaxy F36',
+    brand: 'Samsung',
+     availability:"In-Stock",
+    color:["Coral Red","Onyx Black"," Luxe Violet"],
+    Region:"China",
+    SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
+    category: 'Phones',
+    Prosesor:"Exynos 1380 (5 nm)",
+    STORAGE:["6/128GB","8/128GB"],
+    VARIANT:["Global Variant (Sim + e-Sim)","JP/MEA (Dual e-Sim)","HK / CH (Dual Sim)"], 
+    price:23990,
+    ram:["128GB 6GB" , "128GB 8GB" , "256GB 8GB"],
+    originalPrice: 26804,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F49335%2FSamsung-Galaxy-F36-5G-price-in-Bangladesh-Coral-Red.jpg&w=640&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F49335%2FSamsung-Galaxy-F36-5G-price-in-Bangladesh-Coral-Red.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F49338%2FSamsung-Galaxy-F36-5G-price-in-Bangladesh-Onyx-Black.jpg&w=640&q=75',
+
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F49339%2FSamsung-Galaxy-F36-5G-price-in-Bangladesh-Luxe-Violet.jpg&w=640&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 9,
+    name: 'Xiaomi Poco X7 Pro 5G',
+    brand: 'ZTI',
+     availability:"Out-of-Stock",
+    color:["Yellow","Black","Green"],
+    Region:"China",
+    SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
+    category: 'Phones',
+    Prosesor:"Mediatek Dimensity 8400 Ultra (4 nm)",
+    STORAGE:["8/256GB","12/256GB"],
+    VARIANT:["Global Variant (Sim + e-Sim)","JP/MEA (Dual e-Sim)","HK / CH (Dual Sim)"], 
+    price:32490,
+    ram:["256GB 8GB", "256GB 12GB", "512GB 12GB"],
+    originalPrice: 36301 ,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F46160%2FPoco-X7-Pro-price-in-Bangladesh-Yellow.jpg&w=640&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F46160%2FPoco-X7-Pro-price-in-Bangladesh-Yellow.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F46162%2FPoco-X7-Pro-price-in-Bangladesh-Black.jpg&w=640&q=75',
+
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F46164%2FPoco-X7-Pro-price-in-Bangladesh-Green.jpg&w=640&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
+  {
+    id: 10,
+    name: 'Redmi Pad 2',
+    brand: 'Xiaomi',
+     availability:"In-stock",
+    color:["Mint Green","Lavender Purple"," Graphite Gray"],
+    Region:"China",
+    SIM:"GSM/CDMA/ HSPA/EVDO/LTE/5G",
+    category: 'TABLET',
+    Prosesor:"Mediatek Helio G100 Ultra (6 nm)",
+    STORAGE:["6/128GB","8/256GB"],
+    VARIANT:["WiFi","WiFi+ Cellular"], 
+    price:23490,
+    ram:["128GB 4GB", "128GB 6GB", "256GB 8GB"],
+    originalPrice: 26245,
+    discountPercentage: 25,
+    liveViews: 17,
+    img: 'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F57327%2FRedmi-Pad-2-Price-in-bangladesh-Mint-Green.jpg&w=640&q=75',
+    thumbnails: [
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F57327%2FRedmi-Pad-2-Price-in-bangladesh-Mint-Green.jpg&w=640&q=75',
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F57328%2FRedmi-Pad-2-Price-in-bangladesh-Lavender-Purple.jpg&w=640&q=75',
+
+      'https://dazzle.com.bd/_next/image?url=https%3A%2F%2Fdazzle.sgp1.cdn.digitaloceanspaces.com%2F57329%2FRedmi-Pad-2-Price-in-bangladesh-Graphite-Gray.jpg&w=640&q=75'
+    ],
+    variants: {
+      colors: ['Black', 'Purple', 'Blue', 'Green', 'White'],
+      regions: ['Global Variant (Sim + e-Sim)', 'JP/MEA (Dual e-Sim)', 'HK / CH (Dual Sim)']
+    },
+    specifications: {
+      display: '6.3-inch LTPO Super Retina XDR OLED, 120Hz, HDR10, Dolby Vision, Ceramic Shield 2',
+      durability: 'IP68 dust tight and water resistant',
+      os: 'iOS 26',
+      chipset: 'Apple A19 (3 nm), Hexa-core CPU, Apple 5-core GPU',
+      memory: '256GB 8GB RAM, 512GB 8GB RAM; NVMe',
+      mainCamera: 'Dual 48 MP rear (wide OIS, ultrawide), dual LED flash, HDR, 4K video',
+      selfieCamera: '18 MP front with 4K video, HDR, 3D audio capture',
+      battery: 'Li-Ion 3692 mAh, 25W wireless charging (15W in China), 4.5W reverse wired',
+      dimensions: '149.6 x 71.5 x 8 mm (5.89 x 2.81 x 0.31 in)',
+      weight: '177 g (6.24 oz)',
+      usb: 'USB TYPE-C 2.0, DISPLAYPORT',
+      bluetooth: '6.0, A2DP, LE'
+    }
+  },
   
 ];

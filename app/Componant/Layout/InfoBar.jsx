@@ -29,7 +29,7 @@ const InfoBar = () => {
   ];
 
   return (
-    <div className="max-w-[1440px] mx-auto px-4 mt-6">
+    <div className="max-w-[1440px] mx-auto px-4 md:px-0  mt-6">
       <div className="bg-gray-100 rounded-2xl shadow-sm border border-gray-200 p-4 md:p-6">
         
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">

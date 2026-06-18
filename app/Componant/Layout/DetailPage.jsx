@@ -48,25 +48,26 @@ console.log("Type:", typeof product?.VARIANT);
            
            
           
-            {product.thumbnails?.map((thumbUrl, idx ) => (
-              <button
-                key={idx}
-               onClick={() => {
-  setMainDisplayImg(thumbUrl);
-  setSelectedColor(product.color[idx]);
-}}
-                  
-                className={`w-16 h-20 border-2 rounded-md overflow-hidden bg-white p-1 transition ${
-                  mainDisplayImg === thumbUrl ? 'border-amber-600 shadow-sm' : 'border-gray-200 hover:border-gray-400'
-                }`}
-              >
-                <img 
-                  src={thumbUrl} 
-                  alt={`Thumbnail ${idx + 1}`} 
-                  className="w-full h-full object-contain"
-                />
-              </button>
-            ))}
+           {product.thumbnails?.map((thumbUrl, idx) => (
+  <button
+    key={idx}
+    onClick={() => {
+      setMainDisplayImg(thumbUrl);
+      setSelectedColor(product.color[idx]);
+    }}
+    className={`w-16 h-20 border-2 rounded-md overflow-hidden bg-white p-1 transition ${
+      mainDisplayImg === thumbUrl
+        ? "border-amber-600 shadow-sm"
+        : "border-gray-200 hover:border-gray-400"
+    }`}
+  >
+    <img
+      src={thumbUrl}
+      alt={`Thumbnail ${idx + 1}`}
+      className="w-full h-full object-contain"
+    />
+  </button>
+))}
           </div>
 
           {/* Main Image View */}
@@ -165,16 +166,19 @@ console.log("Type:", typeof product?.VARIANT);
           {/* Configuration / Options Selectors */}
           <div className="bg-gray-100/70 p-5 rounded-xl border border-gray-200/60 space-y-4">
             
-            {/* Color Option Picker */}
-            <div>
+            {/* Color Option Pcker */}
+            <div className="space-x-3">
               <label className="block text-xs font-bold text-gray-700 mb-2">
                 AVAILABLE COLORS:
               </label>
-             {product.color?.map((colorName, idx) => (
+            {product.color?.map((colorName, idx) => (
   <button
     key={idx}
-    onClick={() => setSelectedColor(colorName)}
-    className={`px-3 py-1 border rounded ${
+    onClick={() => {
+      setSelectedColor(colorName);
+      setMainDisplayImg(product.thumbnails[idx]);
+    }}
+    className={`px-3 py-1  border rounded ${
       selectedColor === colorName
         ? "border-amber-500 bg-amber-100"
         : "border-gray-300"

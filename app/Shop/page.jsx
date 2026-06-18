@@ -1,14 +1,27 @@
 "use client"
 import Link from "next/link";
 import { useState, useMemo } from 'react';
-
+import { useSearchParams } from "next/navigation";
 import { products } from "../../Data/Data";
+import { FaFilter } from "react-icons/fa";
+import { RxCross1 } from "react-icons/rx";
+import  useStore  from "../Componant/Layout/Store/store";
+
+import { FaHeart, FaBalanceScale } from "react-icons/fa";
+
 
 export default function ProductPage() {
+  const {addTocart}=useStore();
+  const searchParams = useSearchParams();
+const category = searchParams.get("category");
+
+const brand = searchParams.get("brand");
+  const [hoveredId, setHoveredId] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState(null);
-  const [minPrice, setMinPrice] = useState(11990);
+  const [minPrice, setMinPrice] = useState(5000);
   const [maxPrice, setMaxPrice] = useState(250490);
   const [availability, setAvailability] = useState('');
+  const [isFilterOpen, setisFilterOpen] = useState(false);
   const [selectedColors, setSelectedColors] = useState([]);
   const [selectedProsesor, setSelectedProsesor] = useState([]);
   const [selectedRam, setSelectedRam] = useState([]);
@@ -21,7 +34,9 @@ export default function ProductPage() {
 
  const brandsList = [...new Set(products.map(item => item.brand))];
 
-  
+  const handelmenue =()=>{
+    setisFilterOpen(!isFilterOpen)
+  }
   
 const colorsList = useMemo(() => {
   return [...new Set(
@@ -101,8 +116,8 @@ const STORAGElist = useMemo(() => {
   // Reset Filters
   const clearFilters = () => {
     setSelectedBrand(null);
-    setMinPrice(11990);
-    setMaxPrice(150490);
+    setMinPrice(5000);
+    setMaxPrice(250490);
     setAvailability('');
     setSelectedColors([]);
     setSortBy('Default');
@@ -111,6 +126,18 @@ const STORAGElist = useMemo(() => {
   // Filtering & Sorting Logic
   const filteredProducts = useMemo(() => {
   let result = [...products];
+
+if (category) {
+  result = result.filter(
+    (p) => p.category?.toLowerCase() === category.toLowerCase()
+  );
+}
+if (brand) {
+  result = result.filter(
+    (p) => p.brand?.toLowerCase() === brand.toLowerCase()
+  );
+}
+
 
   if (selectedBrand) {
     result = result.filter(p => p.brand === selectedBrand);
@@ -130,6 +157,8 @@ const STORAGElist = useMemo(() => {
     );
   }
 
+  
+
   if (selectedProsesor.length) {
     result = result.filter(p =>
       selectedProsesor.includes(p.Prosesor)
@@ -137,10 +166,7 @@ const STORAGElist = useMemo(() => {
   }
 
   if (selectedRam.length) {
-    result = result.filter(p =>
-      Array.isArray(p.ram)
-        ? p.ram.some(r => selectedRam.includes(r))
-        : selectedRam.includes(p.ram)
+    result = result.filter(p => Array.isArray(p.ram) ? p.ram.some(r => selectedRam.includes(r)) : selectedRam.includes(p.ram)
     );
   }
 
@@ -151,10 +177,7 @@ const STORAGElist = useMemo(() => {
   }
 
   if (selectedVARIANT.length) {
-    result = result.filter(p =>
-      Array.isArray(p.VARIANT)
-        ? p.VARIANT.some(v => selectedVARIANT.includes(v))
-        : selectedVARIANT.includes(p.VARIANT)
+    result = result.filter(p =>  Array.isArray(p.VARIANT)   ? p.VARIANT.some(v => selectedVARIANT.includes(v)): selectedVARIANT.includes(p.VARIANT)
     );
   }
 
@@ -165,10 +188,7 @@ const STORAGElist = useMemo(() => {
   }
 
   if (selectedSTORAGE.length) {
-    result = result.filter(p =>
-      Array.isArray(p.STORAGE)
-        ? p.STORAGE.some(s => selectedSTORAGE.includes(s))
-        : selectedSTORAGE.includes(p.STORAGE)
+    result = result.filter(p =>Array.isArray(p.STORAGE)? p.STORAGE.some(s => selectedSTORAGE.includes(s)) : selectedSTORAGE.includes(p.STORAGE)
     );
   }
 
@@ -195,7 +215,9 @@ const STORAGElist = useMemo(() => {
   selectedVARIANT,
   selectedSIM,
   selectedSTORAGE,
-  sortBy
+  sortBy,
+  category,
+brand
 ]);
   return (
     <div className="bg-[#FCFBFA]  text-gray-800 font-sans antialiased p-4 md:p-8">
@@ -203,12 +225,10 @@ const STORAGElist = useMemo(() => {
         
         {/* Top Brand Sliders/Tabs */}
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-         {brandsList.map((brand, index) => (
+        {brandsList.map((brand, index) => (
   <button
     key={index}
-    onClick={() =>
-      setSelectedBrand(selectedBrand === brand ? null : brand)
-    }
+    onClick={() => setSelectedBrand(brand)}
     className={`px-5 py-2 rounded-full border text-sm font-medium transition-all whitespace-nowrap ${
       selectedBrand === brand
         ? "border-[#C5A880] bg-[#C5A880] text-white"
@@ -222,15 +242,34 @@ const STORAGElist = useMemo(() => {
 
         {/* Main Content Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 items-start">
-          
+         
           {/* Sidebar Filters */}
-          <aside className="bg-white border border-gray-100 rounded-lg p-5 space-y-6 shadow-sm lg:sticky lg:top-4">
+          <aside className={` fixed top-0 left-0 z-50
+    w-[300px] h-screen overflow-y-auto
+    bg-white p-5 shadow-xl transition-transform duration-300
+
+    ${
+      isFilterOpen ? "translate-x-0" : "-translate-x-full"
+    }
+
+    md:translate-x-0
+    md:static
+    md:w-auto
+    md:h-auto
+    md:shadow-sm
+    lg:sticky
+    lg:top-4`}>
             
             {/* Price Range Section */}
             <div>
               <div className="flex justify-between items-center bg-gray-100 p-3 rounded-md mb-4 cursor-pointer">
                 <span className="text-sm font-bold tracking-wide uppercase text-gray-700">Price Range</span>
-          
+            <button
+                    onClick={() => setisFilterOpen(false)}
+                    className="p-2 rounded-lg md:hidden text-gray-800 hover:bg-gray-200 transition-colors"
+                  >
+                    <RxCross1 />
+                  </button>
               </div>
               <div className="px-1 space-y-4">
                 <input 
@@ -270,7 +309,7 @@ const STORAGElist = useMemo(() => {
 
             {/* Availability Section */}
             <div>
-              <div className="flex justify-between items-center bg-gray-100 p-3 rounded-md mb-3">
+              <div className="flex justify-between mt-5 items-center bg-gray-100 p-3 rounded-md mb-3">
                 <span className="text-sm font-bold tracking-wide uppercase text-gray-700">Availability</span>
   
               </div>
@@ -445,11 +484,34 @@ const STORAGElist = useMemo(() => {
 
           </aside>
 
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          
+
           {/* Product Grid Area */}
           <main className="lg:col-span-3 space-y-4">
             
             {/* Control Bar Header */}
-            <div className="bg-white border border-gray-100 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
+            <div className="bg-white  border border-gray-100 p-4 rounded-lg flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
               <div>
                 <h1 className="text-lg font-bold text-gray-900">Products Of Phones</h1>
                 <p className="text-xs text-gray-500 mt-0.5">Showing 1 to {filteredProducts.length} items from {products.length} Products</p>
@@ -457,12 +519,13 @@ const STORAGElist = useMemo(() => {
               <select 
                 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
-                className="border border-gray-200 bg-gray-50 rounded-md px-4 py-2 text-sm focus:outline-none focus:border-[#C5A880] w-full sm:w-auto"
+                className="border  border-gray-200 bg-gray-50 rounded-md px-4 py-2 text-sm focus:outline-none focus:border-[#C5A880] w-full sm:w-auto"
               >
                 <option>Default</option>
                 <option>Low to High</option>
                 <option>High to Low</option>
               </select>
+               <button onClick={handelmenue} className="flex md:hidden items-center gap-2 border border-[#bfa280]/60 hover:border-[#bfa280] px-3 md:px-4 py-2 rounded-md text-[#dda96a] transition-colors"><FaFilter/>FILTER</button>
             </div>
 
             {/* Products Grid */}
@@ -473,8 +536,21 @@ const STORAGElist = useMemo(() => {
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                 {filteredProducts.map((product) => (
-                  <div key={product.id} className="bg-white border border-gray-100 rounded-lg p-4 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow group">
-                    
+                  <div key={product.id}  onMouseEnter={() => setHoveredId(product.id)}
+  onMouseLeave={() => setHoveredId(null)} className="bg-white border border-gray-100 rounded-lg p-4 flex flex-col justify-between relative shadow-sm hover:shadow-md transition-shadow group">
+                   <div className={`absolute top-4 right-3 flex flex-col gap-2 z-20 transition-all duration-300 ${
+    hoveredId === product.id
+      ? "opacity-100 translate-x-0"
+      : "opacity-0 translate-x-12"
+  }`}>
+  <button className="w-10 h-10 cursor-pointer bg-white shadow-md rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white">
+    <FaHeart size={16} />
+  </button>
+
+  <button className="w-10 h-10 cursor-pointer bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white">
+    <FaBalanceScale size={16} />
+  </button>
+</div> 
                     {/* Upper Badges */}
                     <div className="absolute top-3 left-3 z-10 flex flex-col gap-1">
                       {product.discount && (
@@ -521,10 +597,14 @@ const STORAGElist = useMemo(() => {
 
                     {/* Action Buttons */}
                     <div className="flex gap-2 mt-4 pt-2 border-t border-gray-50">
-                      <button className="w-1/3 bg-black text-white text-xs py-2 rounded font-medium hover:bg-gray-900 transition-colors">
+ <Link href={`/DetailPage/${product.id}`}>
+                      <button className="px-7 cursor-pointer bg-black text-white text-xs py-2 rounded font-medium hover:bg-gray-900 transition-colors">
+
                         View
+                        
                       </button>
-                      <button className="w-2/3 bg-[#FCF7F0] border border-[#EFE6DB] text-[#8C6D41] text-xs py-2 rounded font-semibold hover:bg-[#BA8E55] hover:text-white hover:border-[#BA8E55] transition-all">
+                        </Link>
+                      <button onClick={()=>addTocart(product)} className="w-2/3 bg-[#FCF7F0] border border-[#EFE6DB] text-[#8C6D41] text-xs py-2 rounded font-semibold hover:bg-[#BA8E55] hover:text-white hover:border-[#BA8E55] transition-all">
                         ADD TO CART
                       </button>
                     </div>

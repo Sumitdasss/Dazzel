@@ -27,7 +27,7 @@ const Page = () => {
   return (
     <div>
       <div className="bg-gray-200">
-        <div className="max-w-[1440px] mx-auto px-4 py-4">
+        <div className="max-w-[1440px] mx-auto px-4 md:px-0  py-4">
           <div className="flex flex-col lg:flex-row gap-4">
             
             {/* Main Slider */}

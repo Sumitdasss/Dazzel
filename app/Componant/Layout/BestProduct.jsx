@@ -1,16 +1,19 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
-
+import useStore from "./Store/store";
+import { FaHeart, FaBalanceScale } from "react-icons/fa"
 import {products} from "../../../Data/Data"
-
+import { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 const BestProduct = () => {
+  const {addTocart}=useStore();
+  const [hoveredId, setHoveredId] = useState(null);
   return (
-    <section className="max-w-[1440px] mx-auto px-4 my-10">
-      <div className=" rounded-2xl p-6">
+    <section className="max-w-[1440px] px-4 md:px-0 mx-auto  my-10">
+      <div className=" rounded-2xl ">
 
         <div className="flex flex-col lg:flex-row justify-between gap-5 mb-6">
 
@@ -64,7 +67,21 @@ const BestProduct = () => {
 >
   {products.map((product) => (
     <SwiperSlide key={product.id}>
-      <div className="bg-gray-200/30   rounded-lg overflow-hidden h-full  hover:shadow-lg duration-300">
+      <div  onMouseEnter={() => setHoveredId(product.id)}
+  onMouseLeave={() => setHoveredId(null)} className="bg-white rounded-lg h-full shadow-sm hover:shadow-lg duration-300 relative overflow-hidden group">
+ <div className={`absolute top-4 right-3 flex flex-col gap-2 z-20 transition-all duration-300 ${
+    hoveredId === product.id
+      ? "opacity-100 translate-x-0"
+      : "opacity-0 translate-x-12"
+  }`}>
+  <button className="w-10 h-10 cursor-pointer bg-white shadow-md rounded-full flex items-center justify-center hover:bg-red-500 hover:text-white">
+    <FaHeart size={16} />
+  </button>
+
+  <button className="w-10 h-10 cursor-pointer bg-white shadow-md rounded-full flex items-center justify-center hover:bg-black hover:text-white">
+    <FaBalanceScale size={16} />
+  </button>
+</div>
 
         <div className="relative">
           <span className="absolute left-0 top-0 bg-[#C68A45] text-white text-xs px-2 py-1 rounded-br-lg z-10">
@@ -94,11 +111,12 @@ const BestProduct = () => {
           </div>
 
           <div className="flex gap-2 mt-4">
-            <button className="flex-1 bg-[#081018] text-white py-2 rounded-md">
+             <Link href={`/DetailPage/${product.id}`}>
+            <button className="flex-1 bg-[#081018] px-6 cursor-pointer text-white py-2 rounded-md">
               View
             </button>
-
-            <button className="flex-1 border py-2 rounded-md">
+</Link>
+            <button onClick={()=>{addTocart(product)}} className="flex-1  cursor-pointer border py-2 rounded-md">
               Cart
             </button>
           </div>
